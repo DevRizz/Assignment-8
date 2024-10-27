@@ -1,0 +1,68 @@
+@use "bootstrap" as *;
+@use "variables" as *;
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: $text-color;
+    background-color: $bg-color;
+}
+
+@media (max-width: 768px) {
+    .student-list {
+        .table {
+            font-size: 0.9rem;
+        }
+
+        .form-container {
+            padding: 0 15px;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .btn {
+                margin-bottom: 0.25rem;
+                width: 100%;
+            }
+        }
+    }
+
+    .pagination {
+        font-size: 0.9rem;
+
+        .page-link {
+            padding: 0.25rem 0.5rem;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .navbar-collapse {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #f8f9fa;
+      padding: 1rem;
+      z-index: 1000;
+      display: none;
+  
+      &.show {
+        display: block;
+      }
+    }
+  
+    .navbar-nav {
+      flex-direction: column;
+    }
+  
+    .nav-item {
+      margin-bottom: 0.5rem;
+    }
+  }
